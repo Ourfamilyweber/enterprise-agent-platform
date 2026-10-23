@@ -32,6 +32,22 @@ The repository is a starter, not a completed reference architecture. A new proje
 
 ## Quick start
 
+### Browse the harness as a site
+
+The repository can publish a navigable documentation site with GitHub Pages. The site is assembled from the canonical phase Markdown and agent guides; generated `docs/` and `site/` directories are not source artifacts.
+
+To preview locally:
+
+```bash
+python scripts/prepare_pages.py
+python -m pip install -r requirements-pages.txt
+python -m mkdocs serve
+```
+
+Open the local URL printed by MkDocs, normally `http://127.0.0.1:8000/`.
+
+To publish a fork, enable **Settings > Pages > Build and deployment > GitHub Actions**. The workflow in `.github/workflows/pages.yml` builds and deploys on pushes to `main` and on manual dispatch. Repository administration permissions may be required to enable Pages.
+
 ### 1. Fork and clone
 
 Fork this repository, clone the fork, and create a project branch:
